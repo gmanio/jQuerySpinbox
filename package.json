@@ -1,0 +1,8 @@
+{
+  "name": "plugin",
+  "version": "0.0.1",
+  "description": "simple jquery plugin",
+  "main": "index.js",
+  "author": "gmanpark@tmon.co.kr",
+  "license": "MIT"
+}

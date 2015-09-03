@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Spinbox Component</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <header></header>
+    <div id="contents">
+        <div class="spinbox">
+            <button data-spinbox-decrease>▼</button>
+            <input type="text" data-spinbox-input>
+            <button data-spinbox-increase>▲</button>
+        </div>
+        <div class="spinbox">
+            <button data-spinbox-decrease>▼</button>
+            <input type="text" data-spinbox-input>
+            <button data-spinbox-increase>▲</button>
+        </div>
+        <div class="spinbox">
+            <button data-spinbox-decrease>▼</button>
+            <input type="text" data-spinbox-input>
+            <button data-spinbox-increase>▲</button>
+        </div>
+        <div class="spinbox">
+            <button data-spinbox-decrease>▼</button>
+            <input type="text" data-spinbox-input>
+            <button data-spinbox-increase>▲</button>
+        </div>
+        <div class="spinbox">
+            <button data-spinbox-decrease>▼</button>
+            <input type="text" data-spinbox-input>
+            <button data-spinbox-increase>▲</button>
+        </div>
+    </div>
+    <footer></footer>
+</div>
+<script src="js/jquery.spinbox.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.spinbox').spinbox();
+    });
+
+</script>
+</body>
+</html>
