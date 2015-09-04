@@ -1,7 +1,7 @@
 /**
  * @date 2015.09.03
  * @author gmanpark
- * @description jquery Spinbox Plugin
+ * @description jquery spinbox plugin example
  * @Usage
  *
  * $(document).spinbox({
@@ -11,7 +11,8 @@
  *
  */
 
-(function () {
+(function ($, window, document) {
+
     var Plugin = function (el, options) {
         this.el = el;
         this.$el = $(this.el);
@@ -20,7 +21,7 @@
 
     Plugin.prototype = {
         defaults: {
-            nCurrentVal : 0
+            nCurrentVal: 0
         },
 
         init: function () {
@@ -28,7 +29,7 @@
             this._attachedEvent();
         },
 
-        _attachedEvent: function(){
+        _attachedEvent: function () {
             this.welIncrease = this.$el.find('[data-spinbox-increase]');
             this.welDecrease = this.$el.find('[data-spinbox-decrease]');
             this.welInput = this.$el.find('[data-spinbox-input]');
@@ -37,25 +38,25 @@
             this.welDecrease.on('click', $.proxy(this._onDecreaseBtn, this));
         },
 
-        _onIncreaseBtn: function(){
+        _onIncreaseBtn: function () {
             this.config.nCurrentVal += 1;
             this._updateView();
         },
 
-        _onDecreaseBtn: function(){
+        _onDecreaseBtn: function () {
             this.config.nCurrentVal -= 1;
             this._updateView();
         },
 
-        _updateView: function(){
+        _updateView: function () {
             this.welInput.val(this.config.nCurrentVal);
         }
     }
 
     Plugin.defaults = Plugin.prototype.defaults;
 
-    $.fn.spinbox = function(options) {
-        return this.each(function() {
+    $.fn.spinbox = function (options) {
+        return this.each(function () {
             new Plugin(this, options).init();
         });
     };
