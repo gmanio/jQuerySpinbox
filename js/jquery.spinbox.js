@@ -1,6 +1,14 @@
 /**
  * @date 2015.09.03
+ * @author gmanpark
  * @description jquery Spinbox Plugin
+ * @Usage
+ *
+ * $(document).spinbox({
+ *      // default value setting.
+ *      nCurrentValue : 0
+ * })
+ *
  */
 
 (function () {
